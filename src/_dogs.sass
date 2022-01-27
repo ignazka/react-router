@@ -1,0 +1,29 @@
+@use 'config'
+.Dogs
+
+    background-color: #39003b
+    padding-top: 1.5em
+    color: config.$text
+    height: 100vh
+    h3
+        font-size: 3em
+        padding-bottom: 1em
+        text-decoration: underline
+
+    .dog-img
+        padding: 20px
+        object-fit: cover
+  
+
+        img
+            max-width: 100%
+            min-height: 100%
+            border-radius: 10px
+            &:hover
+                outline: solid 1px white
+
+    .ctn-images
+
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        justify-items: center

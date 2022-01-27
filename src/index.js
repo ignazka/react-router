@@ -16,19 +16,25 @@ render(
     <BrowserRouter>
       <Navigation />
       <div className="routes">
-
-   
-      <Routes>
-        {/* // nested routes */}
-        <Route path="/" element={<App />}>
-        {/* // children of App Route */}
-        <Route path="/about" element={<About />} />
-        <Route path="/dogs" element={<Dogs />} />
-        <Route path="/cats" element={<Cats />} />
-        </Route>
-      </Routes>
+        <Routes>
+          {/* // nested routes */}
+          <Route path="/" element={<App />}>
+            {/* // children of App Route */}
+            <Route path="/about" element={<About />} />
+            <Route path="/dogs" element={<Dogs />} />
+            <Route path="/cats" element={<Cats />} />
+          
+          </Route>
+          <Route
+              path="*"
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <h1>There's nothing here!</h1>
+                </main>
+              }
+            />
+        </Routes>
       </div>
-
     </BrowserRouter>
   </React.StrictMode>,
   rootElement

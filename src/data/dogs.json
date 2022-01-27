@@ -1,0 +1,23 @@
+[ 
+    {
+        "id": 1,
+        "breed": "Schipperke",
+        "name": "Lorenzo",
+        "img": "https://images.dog.ceo/breeds/schipperke/n02104365_6755.jpg"
+        
+},
+{
+    "id": 2,
+    "breed": "Neufundländer",
+    "name": "Mr MC",
+    "img": "https://images.dog.ceo/breeds/newfoundland/n02111277_3907.jpg"
+    
+},
+{
+    "id": 3,
+    "breed": "Golden Retriever",
+    "name": "Zucker",
+    "img": "https://hips.hearstapps.com/clv.h-cdn.co/assets/17/29/1500566326-gettyimages-512366437-1.jpg"
+}
+
+]

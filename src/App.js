@@ -1,21 +1,13 @@
 import "./index.sass";
-import Navigation from "./components/Navigation";
-import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-        <Navigation />
-        <h3>This is an exercise in using React Routing!</h3>
-        <div className='body'>
-        <Routes className='routes'>
-          <Route  path="about" element={<About />} />
-          <Route  path='home' element={<Home />} />
-        </Routes>
-        </div>
-    
+      <h3>This is an exercise in using React Routing!</h3>
+      {/* important for nesting Routes
+     ! add outlet to parent */}
+      <Outlet />
     </div>
   );
 }

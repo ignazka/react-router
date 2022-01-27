@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-const FancyStuff = () => {
+const About = () => {
   return (
     <div className="About">
       <main>
@@ -12,4 +11,4 @@ const FancyStuff = () => {
   );
 };
 
-export default FancyStuff;
+export default About;

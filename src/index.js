@@ -4,18 +4,31 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
-
+import App from "./App";
+import About from "./routes/About";
+import Dogs from "./routes/Dogs";
+import Cats from "./routes/Cats";
+import Navigation from "./components/Navigation";
 const rootElement = document.getElementById("root");
 
 render(
   <React.StrictMode>
     <BrowserRouter>
+      <Navigation />
+      <div className="routes">
+
+   
       <Routes>
-        <Route path="about" element={<About />} />
-        <Route path="home" element={<Home />} />
+        {/* // nested routes */}
+        <Route path="/" element={<App />}>
+        {/* // children of App Route */}
+        <Route path="/about" element={<About />} />
+        <Route path="/dogs" element={<Dogs />} />
+        <Route path="/cats" element={<Cats />} />
+        </Route>
       </Routes>
+      </div>
+
     </BrowserRouter>
   </React.StrictMode>,
   rootElement

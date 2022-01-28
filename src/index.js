@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import About from "./routes/About";
 import Dogs from "./routes/Dogs";
-import Cats from "./routes/Cats";
 import Navigation from "./components/Navigation";
+import DogCard from "./routes/DogCard";
 const rootElement = document.getElementById("root");
 
 render(
@@ -21,15 +21,17 @@ render(
           <Route path="/" element={<App />}>
             {/* // children of App Route */}
             <Route path="/about" element={<About />} />
-            <Route path="/dogs" element={<Dogs />} />
-            <Route path="/cats" element={<Cats />} />
+            <Route path="/dogs" element={<Dogs />} >
+              <Route path=':dogId' element={<DogCard />} />
+            </Route>
           
           </Route>
           <Route
               path="*"
               element={
-                <main style={{ padding: "1rem" }}>
+                <main>
                   <h1>There's nothing here!</h1>
+                  <img style={{ objectFit: "cover", borderRadius: "360px", padding: "1em", height: "600px", width: "600px"}} src='https://i.kym-cdn.com/entries/icons/original/000/026/638/cat.jpg' alt='cat' />
                 </main>
               }
             />
